@@ -2,6 +2,14 @@ FloatingActionButton
 ====================
 Yet another library for drawing [Material Design promoted actions](http://www.google.com/design/spec/patterns/promoted-actions.html).
 
+Credits
+=======
+I used [FloatingActionButton](https://github.com/bohsen/android-floating-action-button) library 
+by [Jerzy Chalupski](https://github.com/futuresimple) as a base for development.
+As this wasn't being actively developed any longer I've decided to incorperate a 
+couple of the pullrequests that was submitted to the original project.
+
+
 Features
 ========
 * Support for normal `56dp` and mini `40dp` buttons.
@@ -33,10 +41,6 @@ dependencies {
 
 To see how the buttons are added to your xml layouts, check the sample project.
 
-
-Credits
-=======
-I used [FloatingActionButton](https://github.com/bohsen/android-floating-action-button) library by [Jerzy Chalupski](https://github.com/futuresimple) as a base for development.
 
 License
 =======
