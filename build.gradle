@@ -1,5 +1,13 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
+ext {
+  versionMajor = 2
+  versionMinor = 0
+  versionPatch = 0
+  versionBuild = 0 // bump for dogfood builds, public betas, etc.
 
+  versionCode = Integer.parseInt("$versionMajor") * 10000 + Integer.parseInt("$versionMinor") * 1000 + Integer.parseInt("$versionPatch") * 100 + Integer.parseInt("$versionBuild")
+  versionName = "$versionMajor.$versionMinor.$versionPatch"
+}
 buildscript {
   repositories {
     jcenter()
