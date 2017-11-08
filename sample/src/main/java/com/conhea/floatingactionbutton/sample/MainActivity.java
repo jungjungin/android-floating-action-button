@@ -10,7 +10,6 @@ import android.widget.Toast;
 
 import com.conhea.floatingactionbutton.FloatingActionButton;
 import com.conhea.floatingactionbutton.FloatingActionsMenu;
-import com.getbase.floatingactionbutton.sample.R;
 
 public class MainActivity extends Activity {
   @Override
