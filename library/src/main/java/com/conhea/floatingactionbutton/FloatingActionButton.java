@@ -1,4 +1,4 @@
-package com.getbase.floatingactionbutton;
+package com.conhea.floatingactionbutton;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -25,13 +25,17 @@ import android.support.annotation.DimenRes;
 import android.support.annotation.DrawableRes;
 import android.support.annotation.IntDef;
 import android.support.annotation.NonNull;
+import android.support.design.widget.CoordinatorLayout;
 import android.util.AttributeSet;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
+import com.getbase.floatingactionbutton.R;
+
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 
+@CoordinatorLayout.DefaultBehavior(FloatingActionButtonSnackbarBehavior.class)
 public class FloatingActionButton extends ImageButton {
 
   public static final int SIZE_NORMAL = 0;

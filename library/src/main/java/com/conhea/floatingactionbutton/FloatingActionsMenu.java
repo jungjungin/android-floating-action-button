@@ -1,4 +1,4 @@
-package com.getbase.floatingactionbutton;
+package com.conhea.floatingactionbutton;
 
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
@@ -14,6 +14,7 @@ import android.os.Parcel;
 import android.os.Parcelable;
 import android.support.annotation.ColorRes;
 import android.support.annotation.NonNull;
+import android.support.design.widget.CoordinatorLayout;
 import android.util.AttributeSet;
 import android.view.ContextThemeWrapper;
 import android.view.TouchDelegate;
@@ -24,6 +25,9 @@ import android.view.animation.Interpolator;
 import android.view.animation.OvershootInterpolator;
 import android.widget.TextView;
 
+import com.getbase.floatingactionbutton.R;
+
+@CoordinatorLayout.DefaultBehavior(FloatingActionButtonSnackbarBehavior.class)
 public class FloatingActionsMenu extends ViewGroup {
   public static final int EXPAND_UP = 0;
   public static final int EXPAND_DOWN = 1;
