@@ -1,12 +1,6 @@
 package com.conhea.floatingactionbutton;
 
 import android.content.Context;
-import android.util.AttributeSet;
-import android.view.View;
-
-import java.util.List;
-
-import android.content.Context;
 import android.support.design.widget.CoordinatorLayout;
 import android.support.design.widget.Snackbar;
 import android.support.v4.view.ViewCompat;
@@ -15,6 +9,7 @@ import android.util.AttributeSet;
 import android.view.View;
 
 import java.util.List;
+
 
 /**
  * Layout behavior that can be applied to either {@link FloatingActionButton} or {@link FloatingActionsMenu}

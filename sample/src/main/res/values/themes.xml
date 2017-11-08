@@ -1,13 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources xmlns:android="http://schemas.android.com/apk/res/android">
+<resources>
 
-    <style name="Theme" parent="@android:style/Theme.Holo.Light.DarkActionBar">
-        <item name="android:textViewStyle">@style/theme_textview_style</item>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowBackground">@color/colorBackground</item>
+        <item name="android:alertDialogTheme">@style/AlertDialogTheme</item>
     </style>
 
-    <style name="theme_textview_style" parent="@android:style/Widget.Holo.Light.TextView">
-        <item name="android:textColor">@color/pink</item>
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowActionModeOverlay">true</item>
+
     </style>
 
+    <style name="AppTheme.ActionBar">
+        <item name="android:windowActionModeOverlay">true</item>
+    </style>
+
+    <!-- Base toolbar theme. -->
+    <style name="ToolBarStyle" parent="Theme.AppCompat">
+        <item name="android:textColorPrimary">@android:color/white</item>
+        <item name="android:textColorSecondary">@android:color/white</item>
+        <item name="actionMenuTextColor">@android:color/white</item>
+        <item name="android:statusBarColor">@color/grey_100</item>
+    </style>
+
+    <!-- Alert Dialog theme -->
+    <style name="AlertDialogTheme" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorPrimary</item>
+    </style>
+
+
+    <!-- Theme applied to LoginActivity and SignUpActivity -->
+    <style name="AppTheme.Login" parent="AppTheme.NoActionBar">
+        <item name="android:windowBackground">@color/colorPrimary</item>
+        <item name="android:textColorHint">@color/iron</item>
+        <item name="android:textColorPrimary">@color/white</item>
+        <item name="colorControlNormal">@color/iron</item>
+        <item name="colorControlActivated">@color/white</item>
+        <item name="colorControlHighlight">@color/white</item>
+        <item name="colorButtonNormal">@color/colorPrimaryDarker</item>
+    </style>
+
+    <!-- Theme applied to NavigationDrawers -->
+    <style name="AppTheme.NavigationView">
+        <item name="android:textColorSecondary">@color/colorTextSecondary</item>
+    </style>
+
+    <!-- Theme applied to Textview in LoginActivity and SignUpActivity -->
+    <style name="WhiteText" parent="@android:style/TextAppearance">
+        <item name="android:textColor">@color/white</item>
+    </style>
 
 </resources>

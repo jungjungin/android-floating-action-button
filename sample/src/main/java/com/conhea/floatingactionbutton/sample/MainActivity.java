@@ -4,9 +4,9 @@ import android.app.Activity;
 import android.graphics.drawable.ShapeDrawable;
 import android.graphics.drawable.shapes.OvalShape;
 import android.os.Bundle;
+import android.support.design.widget.Snackbar;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.widget.Toast;
 
 import com.conhea.floatingactionbutton.FloatingActionButton;
 import com.conhea.floatingactionbutton.FloatingActionsMenu;
@@ -20,7 +20,7 @@ public class MainActivity extends Activity {
     findViewById(R.id.pink_icon).setOnClickListener(new OnClickListener() {
       @Override
       public void onClick(View v) {
-        Toast.makeText(MainActivity.this, "Clicked pink Floating Action Button", Toast.LENGTH_SHORT).show();
+        Snackbar.make(getWindow().getDecorView(),"Clicked pink Floating Action Button", Snackbar.LENGTH_LONG).show();
       }
     });
 
@@ -33,17 +33,17 @@ public class MainActivity extends Activity {
 
     final View actionB = findViewById(R.id.action_b);
 
-    FloatingActionButton actionC = new FloatingActionButton(getBaseContext());
-    actionC.setTitle("Hide/Show Action above");
-    actionC.setOnClickListener(new OnClickListener() {
-      @Override
-      public void onClick(View v) {
-        actionB.setVisibility(actionB.getVisibility() == View.GONE ? View.VISIBLE : View.GONE);
-      }
-    });
+//    FloatingActionButton actionC = new FloatingActionButton(getBaseContext());
+//    actionC.setTitle("Hide/Show Action above");
+//    actionC.setOnClickListener(new OnClickListener() {
+//      @Override
+//      public void onClick(View v) {
+//        actionB.setVisibility(actionB.getVisibility() == View.GONE ? View.VISIBLE : View.GONE);
+//      }
+//    });
 
     final FloatingActionsMenu menuMultipleActions = (FloatingActionsMenu) findViewById(R.id.multiple_actions);
-    menuMultipleActions.addButton(actionC);
+//    menuMultipleActions.addButton(actionC);
 
     final FloatingActionButton removeAction = (FloatingActionButton) findViewById(R.id.button_remove);
     removeAction.setOnClickListener(new OnClickListener() {
