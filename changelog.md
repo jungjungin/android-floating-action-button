@@ -6,8 +6,10 @@ Version 2.0.0 *(2017-11-09)*
 ----------------------------
 
  * Initial release after move to new github repo
- * Added ability to set icon to ActionsMenu. From https://github.com/futuresimple/android-floating-action-button/pull/274
- * Added snackbar support like standard design lib version of FAB. From https://github.com/futuresimple/android-floating-action-button/pull/317
+ * Updated build to newest gradle versions
+ * Added ability to set icon to FloatingActionsMenu. Pullrequest[#274](https://github.com/futuresimple/android-floating-action-button/pull/274)
+ * Added Snackbar support/behavior. Snackbar will now push FloatingActionsMene up. Pullrequest[#317](https://github.com/futuresimple/android-floating-action-button/pull/317)
+ * FloatingActionButton now extend AppCompatImageButton from support library. Pullrequest [#343](https://github.com/futuresimple/android-floating-action-button/pull/343)
 
 Version 1.10.1 *(2015-10-23)*
 ----------------------------
