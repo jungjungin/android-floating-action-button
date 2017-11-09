@@ -18,6 +18,7 @@ import android.support.annotation.NonNull;
 import android.support.design.widget.CoordinatorLayout;
 import android.util.AttributeSet;
 import android.view.ContextThemeWrapper;
+import android.view.MotionEvent;
 import android.view.TouchDelegate;
 import android.view.View;
 import android.view.ViewGroup;
@@ -349,8 +350,9 @@ public class FloatingActionsMenu extends ViewGroup {
         setMeasuredDimension(width, height);
     }
 
-    private int adjustForOvershoot(int dimension) {
-        return dimension * 12 / 10;
+    @Override
+    public boolean onTouchEvent(MotionEvent event) {
+        return false;
     }
 
     @Override
@@ -503,16 +505,20 @@ public class FloatingActionsMenu extends ViewGroup {
         return super.checkLayoutParams(p);
     }
 
+    private int adjustForOvershoot(int dimension) {
+        return dimension * 12 / 10;
+    }
     private static Interpolator sExpandInterpolator = new OvershootInterpolator();
     private static Interpolator sCollapseInterpolator = new DecelerateInterpolator(3f);
+
     private static Interpolator sAlphaExpandInterpolator = new DecelerateInterpolator();
 
     private class LayoutParams extends ViewGroup.LayoutParams {
-
         private ObjectAnimator mExpandDir = new ObjectAnimator();
         private ObjectAnimator mExpandAlpha = new ObjectAnimator();
         private ObjectAnimator mCollapseDir = new ObjectAnimator();
         private ObjectAnimator mCollapseAlpha = new ObjectAnimator();
+
         private boolean animationsSetToPlay;
 
         public LayoutParams(ViewGroup.LayoutParams source) {
@@ -561,7 +567,6 @@ public class FloatingActionsMenu extends ViewGroup {
                 animationsSetToPlay = true;
             }
         }
-
         private void addLayerTypeListener(Animator animator, final View view) {
             animator.addListener(new AnimatorListenerAdapter() {
                 @Override
@@ -575,6 +580,7 @@ public class FloatingActionsMenu extends ViewGroup {
                 }
             });
         }
+
     }
 
     @Override
@@ -685,8 +691,8 @@ public class FloatingActionsMenu extends ViewGroup {
             super.onRestoreInstanceState(state);
         }
     }
-
     public static class SavedState extends BaseSavedState {
+
         public boolean mExpanded;
 
         public SavedState(Parcelable parcel) {
@@ -703,7 +709,6 @@ public class FloatingActionsMenu extends ViewGroup {
             super.writeToParcel(out, flags);
             out.writeInt(mExpanded ? 1 : 0);
         }
-
         public static final Creator<SavedState> CREATOR = new Creator<SavedState>() {
 
             @Override
@@ -716,5 +721,6 @@ public class FloatingActionsMenu extends ViewGroup {
                 return new SavedState[size];
             }
         };
+
     }
 }
