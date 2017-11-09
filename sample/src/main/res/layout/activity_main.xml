@@ -35,6 +35,15 @@
             fab:fab_size="mini"
             fab:fab_title="Action with a very long name that won\'t fit on the screen" />
 
+        <com.conhea.floatingactionbutton.FloatingActionButton
+            android:id="@+id/action_c"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            fab:fab_addButtonIcon="@drawable/ic_fab_star"
+            fab:fab_addButtonIconTint="@color/colorPrimary"
+            fab:fab_size="normal"
+            fab:fab_title="Action with a very long name that won\'t fit on the screen" />
+
     </com.conhea.floatingactionbutton.FloatingActionsMenu>
 
 </android.support.design.widget.CoordinatorLayout>

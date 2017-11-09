@@ -14,6 +14,7 @@ import android.graphics.drawable.LayerDrawable;
 import android.os.Parcel;
 import android.os.Parcelable;
 import android.support.annotation.ColorRes;
+import android.support.annotation.DrawableRes;
 import android.support.annotation.NonNull;
 import android.support.design.widget.CoordinatorLayout;
 import android.util.AttributeSet;
@@ -47,6 +48,7 @@ public class FloatingActionsMenu extends ViewGroup {
     private int mAddButtonSize;
     private boolean mAddButtonStrokeVisible;
     private int mAddButtonIcon;
+    private int mAddButtonIconTint;
     private int mAddButtonIconPressed;
     private int mExpandDirection;
 
@@ -55,6 +57,8 @@ public class FloatingActionsMenu extends ViewGroup {
     private int mLabelsVerticalOffset;
 
     private boolean mExpanded;
+
+    private boolean mRotationEnabled;
 
     private AnimatorSet mExpandAnimation = new AnimatorSet().setDuration(ANIMATION_DURATION);
     private AnimatorSet mCollapseAnimation = new AnimatorSet().setDuration(ANIMATION_DURATION);
@@ -105,10 +109,12 @@ public class FloatingActionsMenu extends ViewGroup {
         mAddButtonSize = attr.getInt(R.styleable.FloatingActionsMenu_fab_addButtonSize, FloatingActionButton.SIZE_NORMAL);
         mAddButtonStrokeVisible = attr.getBoolean(R.styleable.FloatingActionsMenu_fab_addButtonStrokeVisible, true);
         mAddButtonIcon = attr.getResourceId(R.styleable.FloatingActionsMenu_fab_addButtonIcon, 0);
+        mAddButtonIconTint = attr.getColor(R.styleable.FloatingActionsMenu_fab_addButtonIconTint, getColor(android.R.color.transparent));
         mAddButtonIconPressed = attr.getResourceId(R.styleable.FloatingActionsMenu_fab_addButtonIconPressed, 0);
         mExpandDirection = attr.getInt(R.styleable.FloatingActionsMenu_fab_expandDirection, EXPAND_UP);
         mLabelsStyle = attr.getResourceId(R.styleable.FloatingActionsMenu_fab_labelStyle, 0);
         mLabelsPosition = attr.getInt(R.styleable.FloatingActionsMenu_fab_labelsPosition, LABELS_ON_LEFT_SIDE);
+        mRotationEnabled = attr.getBoolean(R.styleable.FloatingActionsMenu_fab_addButtonRotationEnabled, true);
         attr.recycle();
 
         if (mLabelsStyle != 0 && expandsHorizontally()) {
@@ -116,6 +122,19 @@ public class FloatingActionsMenu extends ViewGroup {
         }
 
         createAddButton(context);
+    }
+
+    public void setIcon(@DrawableRes int icon) {
+        mAddButtonIcon = icon;
+        mAddButton.setIcon(icon);
+    }
+
+    public void setRotationEnabled(boolean rotate) {
+        mRotationEnabled = rotate;
+    }
+
+    public boolean isRotationEnabled() {
+        return mRotationEnabled;
     }
 
     public void setOnFloatingActionsMenuUpdateListener(OnFloatingActionsMenuUpdateListener listener) {

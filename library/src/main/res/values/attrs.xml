@@ -5,6 +5,7 @@
         <attr name="fab_colorDisabled" format="color"/>
         <attr name="fab_colorNormal" format="color"/>
         <attr name="fab_icon" format="reference"/>
+        <attr name="fab_iconTint" format="color" />
         <attr name="fab_size" format="enum">
             <enum name="normal" value="0"/>
             <enum name="mini" value="1"/>
@@ -22,9 +23,11 @@
             <enum name="normal" value="0"/>
             <enum name="mini" value="1"/>
         </attr>
+        <attr name="fab_addButtonRotationEnabled" format="boolean"/>
         <attr name="fab_addButtonPlusIconColor" format="color"/>
         <attr name="fab_addButtonStrokeVisible" format="boolean"/>
         <attr name="fab_addButtonIcon" format="reference"/>
+        <attr name="fab_addButtonIconTint" format="color" />
         <attr name="fab_addButtonIconPressed" format="reference"/>
         <attr name="fab_labelStyle" format="reference"/>
         <attr name="fab_labelsPosition" format="enum">
