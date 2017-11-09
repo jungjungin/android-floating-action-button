@@ -6,35 +6,35 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-        <com.conhea.floatingactionbutton.FloatingActionsMenu
-            android:id="@+id/multiple_actions"
+    <com.conhea.floatingactionbutton.FloatingActionsMenu
+        android:id="@+id/multiple_actions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="16dp"
+        fab:fab_addButtonColorNormal="@color/pink"
+        fab:fab_addButtonColorPressed="@color/pink_pressed"
+        fab:fab_addButtonPlusIconColor="@color/white"
+        fab:fab_labelStyle="@style/menu_labels_style">
+
+        <com.conhea.floatingactionbutton.FloatingActionButton
+            android:id="@+id/action_a"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="bottom|end"
-            android:layout_margin="16dp"
-            fab:fab_addButtonColorNormal="@color/pink"
-            fab:fab_addButtonColorPressed="@color/pink_pressed"
-            fab:fab_addButtonPlusIconColor="@color/white"
-            fab:fab_labelStyle="@style/menu_labels_style">
+            fab:fab_colorNormal="@color/pink"
+            fab:fab_colorPressed="@color/pink_pressed"
+            fab:fab_size="mini"
+            fab:fab_title="Action A" />
 
-            <com.conhea.floatingactionbutton.FloatingActionButton
-                android:id="@+id/action_a"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                fab:fab_colorNormal="@color/pink"
-                fab:fab_colorPressed="@color/pink_pressed"
-                fab:fab_size="mini"
-                fab:fab_title="Action A" />
+        <com.conhea.floatingactionbutton.FloatingActionButton
+            android:id="@+id/action_b"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            fab:fab_colorNormal="@color/pink"
+            fab:fab_colorPressed="@color/pink_pressed"
+            fab:fab_size="mini"
+            fab:fab_title="Action with a very long name that won\'t fit on the screen" />
 
-            <com.conhea.floatingactionbutton.FloatingActionButton
-                android:id="@+id/action_b"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                fab:fab_colorNormal="@color/pink"
-                fab:fab_colorPressed="@color/pink_pressed"
-                fab:fab_size="mini"
-                fab:fab_title="Action with a very long name that won\'t fit on the screen" />
-
-        </com.conhea.floatingactionbutton.FloatingActionsMenu>
+    </com.conhea.floatingactionbutton.FloatingActionsMenu>
 
 </android.support.design.widget.CoordinatorLayout>

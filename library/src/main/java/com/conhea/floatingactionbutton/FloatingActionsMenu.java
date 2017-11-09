@@ -66,6 +66,7 @@ public class FloatingActionsMenu extends ViewGroup {
     private int mLabelsPosition;
     private int mButtonsCount;
 
+    private Rect mTouchArea = new Rect();
     private TouchDelegateGroup mTouchDelegateGroup;
 
     private OnFloatingActionsMenuUpdateListener mListener;
@@ -421,12 +422,12 @@ public class FloatingActionsMenu extends ViewGroup {
 
                         label.layout(labelLeft, labelTop, labelRight, labelTop + label.getMeasuredHeight());
 
-                        Rect touchArea = new Rect(
-                                Math.min(childX, labelLeft),
-                                childY - mButtonSpacing / 2,
-                                Math.max(childX + child.getMeasuredWidth(), labelRight),
-                                childY + child.getMeasuredHeight() + mButtonSpacing / 2);
-                        mTouchDelegateGroup.addTouchDelegate(new TouchDelegate(touchArea, child));
+                        mTouchArea.left = Math.min(childX, labelLeft);
+                        mTouchArea.top = childY - mButtonSpacing / 2;
+                        mTouchArea.right = Math.max(childX + child.getMeasuredWidth(), labelRight);
+                        mTouchArea.bottom = childY + child.getMeasuredHeight() + mButtonSpacing / 2;
+
+                        mTouchDelegateGroup.addTouchDelegate(new TouchDelegate(mTouchArea, child));
 
                         label.setTranslationY(mExpanded ? expandedTranslation : collapsedTranslation);
                         label.setAlpha(mExpanded ? 1f : 0f);
@@ -594,6 +595,8 @@ public class FloatingActionsMenu extends ViewGroup {
             createLabels();
         }
     }
+
+
 
     private void createLabels() {
         Context context = new ContextThemeWrapper(getContext(), mLabelsStyle);
