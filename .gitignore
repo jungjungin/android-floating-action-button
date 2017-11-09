@@ -79,8 +79,7 @@ trestle.keystore
 hs_err_pid*
 
 # Misc
-/.idea/workspace.xml
 .DS_Store
 /captures
 **/*.iml
-*.class
+/gradle.properties
