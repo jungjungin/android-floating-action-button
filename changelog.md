@@ -9,7 +9,9 @@ Version 2.0.0 *(2017-11-09)*
  * Updated build to newest gradle versions
  * Added ability to set icon to FloatingActionsMenu. Pullrequest[#274](https://github.com/futuresimple/android-floating-action-button/pull/274)
  * Added Snackbar support/behavior. Snackbar will now push FloatingActionsMene up. Pullrequest[#317](https://github.com/futuresimple/android-floating-action-button/pull/317)
+ * Added ability to set FloatingActionsMenu background color programmatically. Pullrequest[#238](https://github.com/futuresimple/android-floating-action-button/pull/238) 
  * FloatingActionButton now extend AppCompatImageButton from support library. Pullrequest [#343](https://github.com/futuresimple/android-floating-action-button/pull/343)
+ * Bug fix: Space above menu should now be clickable when menu is collapsed. Fixes[#255](https://github.com/futuresimple/android-floating-action-button/issues/255) with fix from pullrequest[#292](https://github.com/futuresimple/android-floating-action-button/pull/292)
 
 Version 1.10.1 *(2015-10-23)*
 ----------------------------
