@@ -8,8 +8,8 @@ android {
         applicationId "com.conhea.floatingactionbutton.sample"
         minSdkVersion 22
         targetSdkVersion 25
-        versionCode Integer.parseInt("$versionMajor") * 10000 + Integer.parseInt("$versionMinor") * 1000 + Integer.parseInt("$versionPatch") * 100 + Integer.parseInt("$versionBuild")
-        versionName "$versionMajor.$versionMinor.$versionPatch"
+        versionCode 2000
+        versionName "2.0.0-SNAPSHOT"
 //    versionCode 20
 //    versionName "2.0"
     }
@@ -24,4 +24,6 @@ android {
 
 dependencies {
     implementation project(':library')
+    implementation 'com.android.support:design:25.4.0'
+    implementation 'com.android.support:appcompat-v7:25.4.0'
 }

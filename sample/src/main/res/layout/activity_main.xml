@@ -21,6 +21,7 @@
             android:id="@+id/action_a"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            fab:fab_icon="@drawable/ic_person_add_white_24dp"
             fab:fab_colorNormal="@color/pink"
             fab:fab_colorPressed="@color/pink_pressed"
             fab:fab_size="mini"
@@ -30,6 +31,7 @@
             android:id="@+id/action_b"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            fab:fab_icon="@drawable/ic_group_add_white_24dp"
             fab:fab_colorNormal="@color/pink"
             fab:fab_colorPressed="@color/pink_pressed"
             fab:fab_size="mini"
@@ -37,4 +39,35 @@
 
     </com.conhea.floatingactionbutton.FloatingActionsMenu>
 
+    <com.conhea.floatingactionbutton.FloatingActionsMenu
+        android:id="@+id/multiple_actions_animated_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|start"
+        fab:fab_addButtonColorNormal="@color/colorPrimary"
+        fab:fab_addButtonColorPressed="@color/colorPrimaryDark"
+        fab:fab_addButtonIcon="@drawable/ic_fab_star"
+        fab:fab_addButtonIconPressed="@drawable/ic_fab_circle"
+        fab:fab_labelStyle="@style/menu_labels_style"
+        android:layout_marginBottom="16dp"
+        android:layout_marginStart="16dp">
+
+        <com.conhea.floatingactionbutton.FloatingActionButton
+            android:id="@+id/action_c"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            fab:fab_icon="@drawable/ic_person_add_white_24dp"
+            fab:fab_colorNormal="@color/bg_action_mode"
+            fab:fab_title="Action with icon"
+            fab:fab_colorPressed="@color/white_pressed"/>
+
+        <com.conhea.floatingactionbutton.FloatingActionButton
+            android:id="@+id/action_d"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            fab:fab_icon="@drawable/ic_group_add_white_24dp"
+            fab:fab_colorNormal="@color/bg_action_mode"
+            fab:fab_title="@string/text_from_string_ressource"
+            fab:fab_colorPressed="@color/white_pressed"/>
+    </com.conhea.floatingactionbutton.FloatingActionsMenu>
 </android.support.design.widget.CoordinatorLayout>

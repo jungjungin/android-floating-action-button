@@ -5,7 +5,6 @@ import android.animation.AnimatorListenerAdapter;
 import android.animation.AnimatorSet;
 import android.animation.ObjectAnimator;
 import android.content.Context;
-import android.content.res.Resources;
 import android.content.res.TypedArray;
 import android.graphics.Canvas;
 import android.graphics.Rect;
@@ -16,6 +15,7 @@ import android.os.Parcelable;
 import android.support.annotation.ColorRes;
 import android.support.annotation.NonNull;
 import android.support.design.widget.CoordinatorLayout;
+import android.support.v4.content.res.ResourcesCompat;
 import android.util.AttributeSet;
 import android.view.ContextThemeWrapper;
 import android.view.MotionEvent;
@@ -66,7 +66,7 @@ public class FloatingActionsMenu extends ViewGroup {
     private int mLabelsPosition;
     private int mButtonsCount;
 
-    private Rect mTouchArea = new Rect();
+    private final Rect mTouchArea = new Rect();
     private TouchDelegateGroup mTouchDelegateGroup;
 
     private OnFloatingActionsMenuUpdateListener mListener;
@@ -224,10 +224,10 @@ public class FloatingActionsMenu extends ViewGroup {
 
                 @Override
                 Drawable getIconDrawable() {
-                    final Resources res = context.getResources();
                     final SwitchingDrawable drawable = mAddButtonIconPressed != 0 ?
-                            new SwitchingDrawable(res.getDrawable(mAddButtonIcon), res.getDrawable(mAddButtonIconPressed)) :
-                            new SwitchingDrawable(res.getDrawable(mAddButtonIcon));
+                            new SwitchingDrawable(ResourcesCompat.getDrawable(getResources(), mAddButtonIcon, getContext().getTheme()),
+                                    ResourcesCompat.getDrawable(getResources(), mAddButtonIconPressed, getContext().getTheme())) :
+                            new SwitchingDrawable(ResourcesCompat.getDrawable(getResources(), mAddButtonIcon, getContext().getTheme()));
                     mAnimatingDrawable = drawable;
                     setUpIconAnimation(drawable);
                     return drawable;

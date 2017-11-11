@@ -20,5 +20,24 @@ public class MainActivity extends Activity {
             }
         });
 
+        findViewById(R.id.action_c).setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Snackbar.make(parentLayout,"Floating Action Button menuitem #2 clicked", Snackbar.LENGTH_LONG).show();
+            }
+        });
+        findViewById(R.id.action_d).setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Snackbar.make(parentLayout,"Floating Action Button menuitem #1 clicked", Snackbar.LENGTH_LONG).show();
+            }
+        });
+        findViewById(R.id.multiple_actions_animated_icon).setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Snackbar.make(parentLayout,"Animated icon clicked", Snackbar.LENGTH_LONG).show();
+            }
+        });
+
     }
 }
