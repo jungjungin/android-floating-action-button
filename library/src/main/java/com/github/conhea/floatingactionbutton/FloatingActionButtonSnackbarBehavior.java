@@ -1,4 +1,4 @@
-package com.conhea.floatingactionbutton;
+package com.github.conhea.floatingactionbutton;
 
 import android.content.Context;
 import android.support.design.widget.CoordinatorLayout;

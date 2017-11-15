@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <com.conhea.floatingactionbutton.FloatingActionsMenu
+    <com.github.conhea.floatingactionbutton.FloatingActionsMenu
         android:id="@+id/multiple_actions"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -17,7 +17,7 @@
         fab:fab_addButtonPlusIconColor="@color/white"
         fab:fab_labelStyle="@style/menu_labels_style">
 
-        <com.conhea.floatingactionbutton.FloatingActionButton
+        <com.github.conhea.floatingactionbutton.FloatingActionButton
             android:id="@+id/action_a"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -27,7 +27,7 @@
             fab:fab_size="mini"
             fab:fab_title="Action A" />
 
-        <com.conhea.floatingactionbutton.FloatingActionButton
+        <com.github.conhea.floatingactionbutton.FloatingActionButton
             android:id="@+id/action_b"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -37,9 +37,9 @@
             fab:fab_size="mini"
             fab:fab_title="Action with a very long name that won\'t fit on the screen" />
 
-    </com.conhea.floatingactionbutton.FloatingActionsMenu>
+    </com.github.conhea.floatingactionbutton.FloatingActionsMenu>
 
-    <com.conhea.floatingactionbutton.FloatingActionsMenu
+    <com.github.conhea.floatingactionbutton.FloatingActionsMenu
         android:id="@+id/multiple_actions_animated_icon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -52,7 +52,7 @@
         android:layout_marginBottom="16dp"
         android:layout_marginStart="16dp">
 
-        <com.conhea.floatingactionbutton.FloatingActionButton
+        <com.github.conhea.floatingactionbutton.FloatingActionButton
             android:id="@+id/action_c"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -61,7 +61,7 @@
             fab:fab_title="Action with icon"
             fab:fab_colorPressed="@color/white_pressed"/>
 
-        <com.conhea.floatingactionbutton.FloatingActionButton
+        <com.github.conhea.floatingactionbutton.FloatingActionButton
             android:id="@+id/action_d"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -69,5 +69,5 @@
             fab:fab_colorNormal="@color/bg_action_mode"
             fab:fab_title="@string/text_from_string_ressource"
             fab:fab_colorPressed="@color/white_pressed"/>
-    </com.conhea.floatingactionbutton.FloatingActionsMenu>
+    </com.github.conhea.floatingactionbutton.FloatingActionsMenu>
 </android.support.design.widget.CoordinatorLayout>
