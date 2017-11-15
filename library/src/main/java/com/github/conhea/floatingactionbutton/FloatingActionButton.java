@@ -1,4 +1,4 @@
-package com.conhea.floatingactionbutton;
+package com.github.conhea.floatingactionbutton;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -29,6 +29,8 @@ import android.support.design.widget.CoordinatorLayout;
 import android.support.v4.content.res.ResourcesCompat;
 import android.util.AttributeSet;
 import android.widget.TextView;
+
+import com.conhea.floatingactionbutton.R;
 
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;

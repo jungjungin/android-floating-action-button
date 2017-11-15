@@ -1,4 +1,4 @@
-package com.conhea.floatingactionbutton;
+package com.github.conhea.floatingactionbutton;
 
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -11,6 +11,8 @@ import android.graphics.drawable.shapes.Shape;
 import android.support.annotation.ColorRes;
 import android.support.annotation.DrawableRes;
 import android.util.AttributeSet;
+
+import com.conhea.floatingactionbutton.R;
 
 public class AddFloatingActionButton extends FloatingActionButton {
   int mPlusColor;

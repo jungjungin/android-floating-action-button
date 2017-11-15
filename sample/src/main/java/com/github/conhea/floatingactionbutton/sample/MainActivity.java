@@ -1,4 +1,4 @@
-package com.conhea.floatingactionbutton.sample;
+package com.github.conhea.floatingactionbutton.sample;
 
 import android.app.Activity;
 import android.os.Bundle;

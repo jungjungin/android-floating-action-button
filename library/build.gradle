@@ -7,8 +7,6 @@ android {
   defaultConfig {
     minSdkVersion 22
     targetSdkVersion 25
-    versionName project.VERSION_NAME
-    versionCode Integer.parseInt(project.VERSION_CODE)
     consumerProguardFiles 'consumer-proguard-rules.pro'
   }
   buildTypes {
@@ -20,9 +18,9 @@ android {
 }
 
 dependencies {
-  implementation 'com.android.support:support-annotations:27.0.0'
+  implementation 'com.android.support:support-annotations:27.0.1'
   implementation 'com.android.support:design:25.4.0'
   implementation 'com.android.support:appcompat-v7:25.4.0'
 }
 
-apply from: '../gradle/gradle-mvn-push.gradle'
+apply from: 'gradle-mvn-push.gradle'
