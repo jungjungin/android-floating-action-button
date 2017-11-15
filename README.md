@@ -35,7 +35,7 @@ Just add the dependency to your `build.gradle`:
 
 ```groovy
 dependencies {
-    compile 'com.github.conhea:floatingactionbutton:2.0.0-SNAPSHOT'
+    compile 'com.github.conhea:floatingactionbutton:2.0.0'
 }
 ```
 
