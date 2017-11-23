@@ -1,6 +1,11 @@
 Change Log
 ==========
 
+Version 2.0.1 *(2017-11-23)*
+----------------------------
+
+ * Added compileOnly configuration to support-annotation library
+ * Updated build to newest build-tool
 
 Version 2.0.0 *(2017-11-09)*
 ----------------------------
