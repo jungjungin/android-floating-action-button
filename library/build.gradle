@@ -2,11 +2,11 @@ apply plugin: 'com.android.library'
 
 android {
   compileSdkVersion 27
-  buildToolsVersion "27.0.1"
+  buildToolsVersion "27.0.3"
 
   defaultConfig {
     minSdkVersion 22
-    targetSdkVersion 25
+    targetSdkVersion 27
     consumerProguardFiles 'consumer-proguard-rules.pro'
   }
   buildTypes {
@@ -18,9 +18,9 @@ android {
 }
 
 dependencies {
-  compileOnly 'com.android.support:support-annotations:27.0.1'
-  implementation 'com.android.support:design:27.0.1'
-  implementation 'com.android.support:appcompat-v7:27.0.1'
+  compileOnly 'com.android.support:support-annotations:27.1.1'
+  compile 'com.android.support:design:27.1.1'
+  compile 'com.android.support:appcompat-v7:27.1.1'
 }
 
 apply from: 'gradle-mvn-push.gradle'

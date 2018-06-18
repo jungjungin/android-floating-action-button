@@ -2,14 +2,14 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 27
-    buildToolsVersion "27.0.1"
+    buildToolsVersion "27.0.3"
 
     defaultConfig {
         applicationId "com.github.conhea.floatingactionbutton.sample"
         minSdkVersion 22
-        targetSdkVersion 25
-        versionCode 2001
-        versionName "2.0.1"
+        targetSdkVersion 27
+        versionCode 2002
+        versionName "2.0.2"
         multiDexEnabled true
     }
     buildTypes {
@@ -27,6 +27,6 @@ android {
 
 dependencies {
     implementation project(':library')
-    implementation 'com.android.support:design:27.0.1'
-    implementation 'com.android.support:appcompat-v7:27.0.1'
+    implementation 'com.android.support:design:27.1.1'
+    implementation 'com.android.support:appcompat-v7:27.1.1'
 }
