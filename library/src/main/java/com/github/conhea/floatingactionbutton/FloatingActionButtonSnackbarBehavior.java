@@ -3,7 +3,6 @@ package com.github.conhea.floatingactionbutton;
 import android.content.Context;
 import android.support.design.widget.CoordinatorLayout;
 import android.support.design.widget.Snackbar;
-import android.support.v4.view.ViewCompat;
 import android.support.v4.view.animation.FastOutSlowInInterpolator;
 import android.util.AttributeSet;
 import android.view.View;
@@ -52,7 +51,7 @@ public class FloatingActionButtonSnackbarBehavior extends CoordinatorLayout.Beha
 
         for (View view : dependencies) {
             if (view instanceof Snackbar.SnackbarLayout && parent.doViewsOverlap(fab, view)) {
-                minOffset = Math.min(minOffset, ViewCompat.getTranslationY(view) - (float) view.getHeight());
+                minOffset = Math.min(minOffset, view.getTranslationY() - (float) view.getHeight());
             }
         }
 
@@ -78,11 +77,11 @@ public class FloatingActionButtonSnackbarBehavior extends CoordinatorLayout.Beha
     private void updateFabTranslationForSnackbar(CoordinatorLayout parent, View fab, View snackbar) {
         final float translationY = getFabTranslationYForSnackbar(parent, fab);
         if (translationY != this.mTranslationY) {
-            ViewCompat.animate(fab).cancel();
+            fab.animate().cancel();
             if (Math.abs(translationY - this.mTranslationY) == (float) snackbar.getHeight()) {
-                ViewCompat.animate(fab).translationY(translationY).setInterpolator(new FastOutSlowInInterpolator());
+                fab.animate().translationY(translationY).setInterpolator(new FastOutSlowInInterpolator());
             } else {
-                ViewCompat.setTranslationY(fab, translationY);
+                fab.setTranslationY(translationY);
             }
 
             this.mTranslationY = translationY;
