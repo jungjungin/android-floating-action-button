@@ -1,6 +1,12 @@
 Change Log
 ==========
 
+Version 2.0.2 *(2018-06-22)*
+----------------------------
+
+ * Refactored code that used deprecated classes and methods from Android Suport Library
+ * Updated build to newest build-tool
+
 Version 2.0.1 *(2017-11-23)*
 ----------------------------
 
